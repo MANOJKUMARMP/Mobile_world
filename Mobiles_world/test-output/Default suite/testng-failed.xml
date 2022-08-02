@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="mob_Req.Con_us">
+      <class name="mob_Req.sign_IN">
         <methods>
-          <include name="contact"/>
+          <include name="entry"/>
+          <include name="Signin"/>
         </methods>
-      </class> <!-- mob_Req.Con_us -->
+      </class> <!-- mob_Req.sign_IN -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

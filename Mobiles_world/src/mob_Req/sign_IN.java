@@ -3,9 +3,12 @@ package mob_Req;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class sign_IN {
+	WebDriver driver;
 	@Test
 	public void Signin() throws InterruptedException
 		{
@@ -13,8 +16,19 @@ public class sign_IN {
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://mobileworld.azurewebsites.net/");
 		driver.manage().window().maximize();
-		driver.findElement(By.xpath("//button[@class='btn btn-warning my-2 my-sm-0']")).click();
+		//driver.findElement(By.xpath("//button[@class='btn btn-warning my-2 my-sm-0']")).click();
 		Thread.sleep(1000);
+		driver.quit();
+		}
+	
+	@BeforeMethod
+	public void entry() throws InterruptedException
+	{
+		System.setProperty("webdriver.chrome.driver", "./softwares/chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://mobileworld.azurewebsites.net/");
+		driver.findElement(By.xpath("//button[@class='btn btn-warning my-2 my-sm-0']")).click();
+		driver.manage().window().maximize();
 		driver.findElement(By.id("username")).sendKeys("manojmp");
 		Thread.sleep(1000);
 		driver.findElement(By.id("password")).sendKeys("Manoj@1234");
@@ -22,5 +36,6 @@ public class sign_IN {
 		driver.findElement(By.xpath("//a[@class='btn btn-primary btn-block']")).click();
 		Thread.sleep(2000);
 		driver.quit();
-}    
+	}    
 }
+
