@@ -10,12 +10,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class order_Req {
-	 WebDriver driver;
-	 @BeforeMethod
+
+	@Test
 	    public void Order() throws InterruptedException
 	    {
 		    System.setProperty("webdriver.chrome.driver", "./softwares/chromedriver.exe");
@@ -33,12 +32,7 @@ public class order_Req {
 	        String parentId = it.next();
 	        String childId = it.next();
 	        driver.switchTo().window(childId);
-	    }
-	 @Test
-	 public void phone() throws InterruptedException
-	        {
-	        	
-	            driver.findElement(By.xpath("//input[@id='inputFirstName']")).sendKeys("manojmp");
+	        driver.findElement(By.xpath("//input[@id='inputFirstName']")).sendKeys("manojmp");
 	        driver.findElement(By.xpath("//body/div[@class='container']/div[1]/div[2]/form[1]/div[1]/div[2]/input")).sendKeys("kumar");
 	        driver.findElement(By.id("inputEmail")).sendKeys("mmp1467@gmail.com");
 	        driver.findElement(By.id("inputPassword")).sendKeys("Manoj@1234");
