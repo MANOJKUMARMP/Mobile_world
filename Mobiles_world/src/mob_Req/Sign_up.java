@@ -52,14 +52,13 @@ public class Sign_up {
 		System.setProperty("webdriver.chrome.driver", "./softwares/chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://mobileworld.azurewebsites.net/");
-		Thread.sleep(1000);
 		driver.manage().window().maximize();
 		driver.findElement(By.xpath("//button[@class='btn btn-warning my-2 my-sm-0']")).click();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		driver.findElement(By.id("username")).sendKeys("manojmp");
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		driver.findElement(By.id("password")).sendKeys("Manoj@1234");
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		driver.findElement(By.xpath("//a[@class='btn btn-primary btn-block']")).click();
 		driver.quit();
 }    
