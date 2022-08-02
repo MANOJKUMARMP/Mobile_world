@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class Sign_up {
 	WebDriver driver;
-	@Test
+	@BeforeMethod
     public void signup() throws InterruptedException
 
 {
@@ -44,10 +44,18 @@ public class Sign_up {
 		driver.findElement(By.xpath("//button[@type='Submit']")).click();
 		driver.switchTo().alert().accept();
 		Thread.sleep(2000);
+		driver.close();
 }
-     @Test
+	@Test
 	public void Signin() throws InterruptedException
 		{
+		System.setProperty("webdriver.chrome.driver", "./softwares/chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://mobileworld.azurewebsites.net/");
+		Thread.sleep(1000);
+		driver.manage().window().maximize();
+		driver.findElement(By.xpath("//button[@class='btn btn-warning my-2 my-sm-0']")).click();
+		Thread.sleep(2000);
 		driver.findElement(By.id("username")).sendKeys("manojmp");
 		Thread.sleep(2000);
 		driver.findElement(By.id("password")).sendKeys("Manoj@1234");
