@@ -3,9 +3,21 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="mob_Req.Sign_up"/>
+      <!-- <class name="mob_Req.Sign_up" />-->
       <class name="mob_Req.Con_us"/>
       <class name="mob_Req.order_Req"/>
-    </classes>
+          </classes>
+    
   </test> <!-- Test -->
+
+
+<test name="Suite"/>
+<classes>
+    <class name="mob_Req.Sign_up" />
+     <methods>
+		<exclude name="Signin"/>
+	</methods>
+	</class>
+</classes>
+</test>
 </suite> <!-- Suite -->
