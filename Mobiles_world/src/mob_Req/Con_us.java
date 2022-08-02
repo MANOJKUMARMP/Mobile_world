@@ -6,11 +6,12 @@ import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class Con_us {
 
-	@Test
+@BeforeMethod
     public void contact() throws InterruptedException
     {
 		System.setProperty("webdriver.chrome.driver", "./softwares/chromedriver.exe");
@@ -26,11 +27,8 @@ public class Con_us {
         String childId = it.next();
         driver.switchTo().window(childId);
         driver.manage().window().maximize();
-        Thread.sleep(1000);
         driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys("manojmp");
-        Thread.sleep(1000);
         driver.findElement(By.xpath("//input[@placeholder='Email']")).sendKeys("mmp1467@gmail.com");
-        Thread.sleep(1000);
         driver.findElement(By.xpath("//input[@placeholder='Phone']")).sendKeys("8970712707");
         Thread.sleep(1000);
         driver.findElement(By.name("message")).sendKeys("Hi Qudos");
