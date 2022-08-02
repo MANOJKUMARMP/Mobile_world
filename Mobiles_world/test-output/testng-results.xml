@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-02T09:14:41 IST" name="Default suite" finished-at="2022-08-02T09:15:16 IST" duration-ms="34900">
+  <suite started-at="2022-08-02T11:14:47 IST" name="Default suite" finished-at="2022-08-02T11:15:03 IST" duration-ms="15706">
     <groups>
     </groups>
-    <test started-at="2022-08-02T09:14:41 IST" name="Default test" finished-at="2022-08-02T09:15:16 IST" duration-ms="34900">
-      <class name="mob_Req.Sign_up">
-        <test-method signature="signup()[pri:0, instance:mob_Req.Sign_up@71b1176b]" started-at="2022-08-02T09:14:41 IST" name="signup" finished-at="2022-08-02T09:15:16 IST" duration-ms="34858" status="PASS">
+    <test started-at="2022-08-02T11:14:47 IST" name="Default test" finished-at="2022-08-02T11:15:03 IST" duration-ms="15706">
+      <class name="mob_Req.order_Req">
+        <test-method signature="Order()[pri:0, instance:mob_Req.order_Req@71b1176b]" started-at="2022-08-02T11:14:47 IST" name="Order" finished-at="2022-08-02T11:15:02 IST" duration-ms="15659" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- signup -->
-      </class> <!-- mob_Req.Sign_up -->
+        </test-method> <!-- Order -->
+      </class> <!-- mob_Req.order_Req -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -61,7 +61,8 @@ public class order_Req {
 	        a.get(1).click();
 	        driver.findElement(By.xpath("//button[@class='btn btn-primary']")).click();
 	        Thread.sleep(2000);
-	        
+	        driver.findElement(By.xpath("//a[@class='btn btn-secondary']")).click();
+	        driver.quit();
 
 	    }
 
